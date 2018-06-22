@@ -1,0 +1,18 @@
+{
+  "name": "systeminfo",
+  "version": "1.0.0",
+  "description": "Basic System Monitor",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "SystemInfo"
+  },
+  "author": "Shivendra TechSter",
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^2.0.2"
+  }
+}

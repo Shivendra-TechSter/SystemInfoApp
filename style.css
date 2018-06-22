@@ -1,0 +1,11 @@
+body {
+    padding: 20px;
+    background-color: cadetblue;
+    color: aliceblue;
+}
+
+ul {
+    background-color: aliceblue;
+    color: cadetblue;
+    box-shadow: 5px 5px 5px grey;
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SystemInfo</title>
+
+    <link rel="stylesheet" href="bootswatch.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+            <h1 class="display-1 text-center">SystemInfo</h1>
+            <hr>
+            <div id="output">
+            </div>
+    </div>
+    <script>
+        console.log(process);
+        let output = `<h2 class = "page-header text-center display-3">App Version Data</h2>
+        <br>
+            <ul class="list-group shadow">
+                <li class="list-group-item">Node : ${process.versions.node}</li>
+                <li class="list-group-item">Chrome : ${process.versions.chrome}</li>
+                <li class="list-group-item">Electron : ${process.versions.electron}</li>
+            </ul>
+<br>
+            <h2 class = "page-header text-center display-3">System specs</h2>
+<br>
+            <ul class="list-group shadow">
+                <li class="list-group-item">Architecture : ${process.versions.arch}</li>
+                <li class="list-group-item">Processor : ${process.env.PROCESSOR_IDENTIFIER}</li>
+                <li class="list-group-item">Printer : ${process.env.PRINTER}</li>
+            </ul>
+            
+            <br>
+            <h2 class = "page-header text-center display-3">System memory</h2>
+            <br>
+            
+            <ul class="list-group shadow">
+                <li class="list-group-item">Total : ${process.getSystemMemoryInfo().total/1048576} GB</li>
+                <li class="list-group-item">Free : ${process.getSystemMemoryInfo().free/1048576} GB</li>
+            </ul>
+
+<br>
+            <h2 class = "page-header text-center display-3">About PC</h2>
+<br>
+            <ul class="list-group shadow">
+                <li class="list-group-item">Name : ${process.env.USERDOMAIN}</li>
+                <li class="list-group-item">Username : ${process.env.USERNAME}</li>
+            </ul>
+
+
+        `;
+        document.getElementById('output').innerHTML = output;
+    </script>
+    <script>
+        require('./renderer.js');
+    </script>
+</body>
+
+</html>
